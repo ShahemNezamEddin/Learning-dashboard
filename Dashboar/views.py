@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from . forms import *
 from django.contrib import messages
 
@@ -25,3 +25,9 @@ def notes(request):
     notes = Notes.objects.filter(user=request.user)
     context = {'notes': notes, 'form': form}
     return render(request, 'dashboard/notes.html', context)
+
+
+def delete_note(request, pk=None):
+    Notes.objects.get(id=pk).delete()
+    messages.success(request, f"Note removed by {request.user.username} successfully!")
+    return redirect("notes")
