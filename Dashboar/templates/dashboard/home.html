@@ -1,0 +1,70 @@
+{% extends 'dashboard/base.html' %} 
+{% load static %} 
+{% block content %}
+
+<section class="container text-center">
+  <h3>Welcome</h3>
+
+  <hr> <br>
+  <div class="row">
+    <div class="col-md-6">
+      <a href="#">
+        <div class="card">
+          <img class="card-img-top" src="{% static 'images/notes.jpg' %}" alt="Notes image">
+          <div class="card-body">
+            <h5 class="card-title ">
+              Notes
+            </h5>
+            Create Notes to refer them later. They are stored permanently until deleted
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="col-md-6">
+      <a href="#">
+        <div class="card">
+          <img class="card-img-top" src="{% static 'images/homework.jpg' %}" alt="Homework image">
+          <div class="card-body">
+            <h5 class="card-title ">
+              Homework
+            </h5>
+            Add homeworks and assign them deadlines. They will be displayed prioritised by deadlines
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+  <br><br><br>
+  <div class="row">
+    <div class="col-md-6">
+        <a href="#">
+          <div class="card mt-20">
+            <img class="card-img-top" src="{% static 'images/books.jpg' %}" alt="Books image">
+            <div class="card-body">
+              <h5 class="card-title ">
+                Books
+              </h5>
+              Browse books from a list of neatly organised book menu
+            </div>
+          </div>
+        </a>
+    </div>
+    <div class="col-md-6">
+      <a href="#">
+        <div class="card">
+          <img class="card-img-top" src="{% static 'images/wiki.jpg' %}" alt="WikiPedia image">
+          <div class="card-body">
+            <h5 class="card-title ">
+              WikiPedia
+            </h5>
+            Homework and Assignments? Search wikipedia to get fast results
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+
+</section>
+{% endblock content %}
