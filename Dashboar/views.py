@@ -3,6 +3,7 @@ from . forms import *
 from django.contrib import messages
 from django.forms.widgets import FileInput
 import requests
+import wikipedia
 
 
 # Create your views here.
@@ -128,3 +129,25 @@ def books(request):
         'form': form
     }
     return render(request, 'dashboard/books.html', context)
+
+# Wiki views.
+
+
+def wiki(request):
+    if request.method == 'POST':
+        form = DashboardForm(request.POST)
+        text = request.POST['text']
+        search = wikipedia.page(text)
+        context = {
+            'form': form,
+            'title': search.title,
+            'url': search.url,
+            'details': search.summary,
+        }  
+        return render(request, 'dashboard/wiki.html', context)
+    else:
+        form = DashboardForm()
+        context = {
+            'form': form
+        }
+    return render(request, 'dashboard/wiki.html', context)

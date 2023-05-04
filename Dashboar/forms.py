@@ -25,7 +25,7 @@ class HomeworkForms(forms.ModelForm):
         fields = ['subject', 'title', 'description', 'due', 'is_finished']
 
 
-# books forms.
+# books and Wiki forms.
 
 class DashboardForm(forms.Form):
-    text = forms.CharField(max_length=100, label='Enter youtube search ')
+    text = forms.CharField(max_length=100, label='Enter search')

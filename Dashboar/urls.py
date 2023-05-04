@@ -11,4 +11,6 @@ urlpatterns = [
     path('delete_homework/<int:pk>', views.delete_homework, name='delete-homework'),
 
     path('books', views.books, name='books'),
+
+    path('wiki', views.wiki, name='wiki'),
     ]
