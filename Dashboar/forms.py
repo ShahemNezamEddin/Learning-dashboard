@@ -15,13 +15,13 @@ class NotesForm(forms.ModelForm):
 
 
 class DateInput(forms.DateInput):
-    input_type = 'date'
+    input_type = 'datetime'
 
 
 class HomeworkForms(forms.ModelForm):
     class Meta:
         model = Homework
-        widgets = {'due': DateInput()}
+        widgets = {'due': DateInput(attrs={'placeholder': 'YYYY-MM-DD HH:MM'})}
         fields = ['subject', 'title', 'description', 'due', 'is_finished']
 
 
