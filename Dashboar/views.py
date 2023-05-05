@@ -4,6 +4,7 @@ from django.contrib import messages
 from django.forms.widgets import FileInput
 import requests
 import wikipedia
+from django.contrib.auth.decorators import login_required
 
 
 # Create your views here.
@@ -16,7 +17,7 @@ def home(request):
 
 # home views.
 
-
+@login_required
 def notes(request):
     if request.method == "POST":
         form = NotesForm(request.POST)
@@ -30,7 +31,7 @@ def notes(request):
     context = {'notes': notes, 'form': form}
     return render(request, 'dashboard/notes.html', context)
 
-
+@login_required
 def delete_note(request, pk=None):
     Notes.objects.get(id=pk).delete()
     messages.success(request, f"Note removed by {request.user.username} successfully!")
@@ -39,6 +40,7 @@ def delete_note(request, pk=None):
 
 # homework views.
 
+@login_required
 def homework(request):
     if request.method == 'POST':
         form = HomeworkForms(request.POST)
@@ -48,7 +50,7 @@ def homework(request):
                 if finished == 'on':
                     finished = True
                 else:
-                    finished = False                
+                    finished = False              
             except:
                 finished = False
 
@@ -77,7 +79,7 @@ def homework(request):
     }
     return render(request, 'dashboard/homework.html', context)
 
-
+@login_required
 def update_homework(request, pk=None):
     homework = Homework.objects.get(id=pk)
     if homework.is_finished:
@@ -88,7 +90,7 @@ def update_homework(request, pk=None):
     homework.save()
     return redirect('homework')
 
-
+@login_required
 def delete_homework(request, pk=None):
     Homework.objects.get(id=pk).delete()
     messages.success(request, f"Homework removed by {request.user.username} successfully!")
@@ -151,3 +153,21 @@ def wiki(request):
             'form': form
         }
     return render(request, 'dashboard/wiki.html', context)
+
+# Register views.
+
+
+def register(request):
+    if request.method == 'POST':
+        form = UserRegistrationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            username = form.cleaned_data.get('username')
+            messages.success(request, f"Account created for {username}!!")
+            return redirect("login")
+    else:
+        form = UserRegistrationForm
+    context = {
+        'form': form,
+    }
+    return render(request, 'dashboard/register.html', context)
