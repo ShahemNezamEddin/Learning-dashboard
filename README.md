@@ -1,108 +1,201 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Learning-dashboard
+- Learning-dashboard is a site that hopes to demonstrate how pure HTML, CSS, JavaScript, Python and, Django  works in a real-world context. 
+- The site will be targeted users who want to CRUD notes, CRUD homework, and search a book, and wikipedia.
+- The site hopes to help users to make their learning easier.
+- The users can register to us the notes, and homework.
+- The users can us the books, and wikipedia with out register.
+- It will show that the notes and the homeworks after the user is login.
+- Learning-dashboard is a application will have a postgres database.
 
-Welcome ShahemNezamEddin,
+[Learning-dashboard]() site.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+![Responsive Mockup]()
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+# Navigator
 
-## Gitpod Reminders
+- [**User experience UX**](<#user-experience-ux>)
+    - [User stories](<#user-stories>)
+    - [Site structure](<#site-structure>)
+- [**Features**](<#features>)
+    - [Existing features](<#existing-features>)
+        - [Home](<#home>)
+        - [Notes](<#notes>)
+        - [Delete_note](<#delete_note>)
+        - [Homework](<#homework>)
+        - [Update_homework](<#update_homework>)
+        - [Delete_homework](<#delete_homework>)
+        - [Books](<#books>)
+        - [Wiki](<#wiki>)
+        - [Register](<#register>)
+    - [Future features](<#future-features>)
+- [**Technologies used**](<#technologies-used>)
+- [**Python Packages**](<#python-packages>)        
+- [**Testing**](<#testing>)
+    - [Code Validation](<#code-validation>)
+    - [Browser Compatibility](<#browser-compatibility>)
+    - [Responsiveness Test](<#responsiveness-test>)
+    - [Lighthouse](<#lighthouse>)
+    - [Manual testing](<#manual-testing>)
+    - [User stories testing](<#user-stories-testing>)
+    - [Fixed bugs](<#Fixed-bugs>)
+# User experience (UX)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## User stories
 
-`python3 -m http.server`
+- As a user, I want to understand the purpose of this site upon loading it.
+- As a user, I want to be able to know what are the instructions to use this site.
+- As a user, I want to be able to add or delete note, and update the database.
+- As a user, I want to be able to add or delete homework, and update the database.
+- As a user, I want to be able to search a book, and open in a now tap.
+- As a user, I want to be able to search on wikipedia, and open in a now tap.
+- As a user, I want to be able to register, login and logout.
+- As a user, I want to be able to navigate easily on the site.
+- As a user I want have an easy way of getting back to the home page.
 
-A blue button should appear to click: _Make Public_,
+[Back to top](<#navigator>)
 
-Another blue button should appear to click: _Open Browser_.
+## Site structure
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+- Learning-dashboard is application that is being presented in 8 pages website.
+- When the application starts the user see a short welcome message, and four choices.
+- Two of them are accessed without login
+- Two of them are accessed with login.
+ 
+[Back to top](<#navigator>)
 
-A blue button should appear to click: _Make Public_,
+# Features 
 
-Another blue button should appear to click: _Open Browser_.
+## Existing features
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+### Home
+- Render the home page.
 
-To log into the Heroku toolbelt CLI:
+[Back to top](<#navigator>)
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+### Notes
+- Render the notes page, and the user abel to add note.
+- The user gets a success message after he adds the note.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+[Back to top](<#navigator>)
 
-------
+### Delete_note
+- Redirect to the notes page, and the user abel to delete note.
+- The user gets a success message after he deletes the note.
 
-## Release History
+[Back to top](<#navigator>)
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+### Homework
+- Render the homework page, and the user abel to add homework.
+- The user gets a success message after he adds the homework.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+[Back to top](<#navigator>)
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+### Update_homework
+- Render the homework page, and the user abel to update is_finished in homework.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+[Back to top](<#navigator>)
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+### Delete_homework
+- Redirect to the notes page, and the user abel to delete homework.
+- The user gets a success message after he deletes the homework.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+[Back to top](<#navigator>)
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+### Books
+- Render the books page, get the input text from the user then search it, and get the top ten results.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+[Back to top](<#navigator>)
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+### Wiki
+- Render the wiki page, get the input text from the user then search it.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+[Back to top](<#navigator>)
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+### Register
+- Render the register page, get the input text from the user then create a user.
+- The user gets a success message after he register.
+- Redirect to the login page.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+[Back to top](<#navigator>)
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+## Future features
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+[Back to top](<#navigator>)
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+# Technologies used
+- [Django](https://www.djangoproject.com/) - Provides Python web framework for the application.
+- [Python](https://en.wikipedia.org/wiki/Python_(programming_language)) - Provides the functionality for the application.
+- [ElephantSQL](https://customer.elephantsql.com/) - Used to host the application data.
+- [Gitpod](https://www.gitpod.io/#get-started) - used to deploy the website.
+- [Github](https://github.com/) - used to host and edit the website.
+- [Heroku](https://en.wikipedia.org/wiki/Heroku) - A cloud platform that the application is deployed to.
 
-------
+[Back to top](<#navigator>)
 
-## FAQ about the uptime script
+# Python Packages
+- [Sys](https://docs.python.org/3/library/sys.html) - A module that provides access to used or maintained by the interpreter and to functions that interact strongly with the interpreter. It is always available (*text taken from [here](https://docs.python.org/3/library/sys.html)*)
+- [OS](https://docs.python.org/3/library/os.html) - A module that provides a portable way of using OS dependent functionality.
 
-**Why have you added this script?**
+[Back to top](<#navigator>)
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+# Testing 
 
-**How will this affect me?**
+## Code Validation
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+### Python
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+* No errors were returned when passing through the official [CI Python Linter](https://pep8ci.herokuapp.com/)
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+![CI Python Linter]()
 
-**So….?**
+[Back to top](<#navigator>)
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+## Browser Compatibility
 
-**Can I opt out?**
+- Learning-dashboard site was tested on the following browsers Google Chrome, Safari and Mozilla Firefox.
+- Appearance, functionality and responsiveness were consistent on a range of different device sizes and browsers.
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+[Back to top](<#navigator>)
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+## Responsiveness Test
 
-**Anything more?**
+* The responsive tests were exercised by using [Google Chrome DevTools](https://developer.chrome.com/docs/devtools/).
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+|        | iPad mine | Galaxy S5 | iPhone 6/7/8 | iPad | iPad Pro | iPhone 6/7/8 plus | Display >950px  |
+|--------|-----------|-----------|--------------|------|----------|-------------------|-----------------|
+| Text   | pass      | pass      | pass         | pass | pass     | pass              | pass            |
+| images | pass      | pass      | pass         | pass | pass     | pass              | pass            |
+| forms  | pass      | pass      | pass         | pass | pass     | pass              | pass            |
+[Back to top](<#navigator>)
 
----
+## Lighthouse
+Shahem inventory site was also tested using [Google Lighthouse](https://developers.google.com/web/tools/lighthouse) in Chrome Developer Tools to test the page for:
+- Performance - How the page performs whilst loading.
+- Accessibility - Is the site accessible for all users and how can it be improved.
+- Best Practices - Site conforms to industry best practices.
+- SEO - Search engine optimization. Is the site optimized for search engine result rankings.
 
-Happy coding!
+![Lighthouse test results Dice Game page]()
+
+[Back to top](<#navigator>)
+
+## Manual testing
+- Show home page working as expected.
+- Home page features working as expected.
+- Show notes page working as expected.
+- Notes page features working as expected.
+- Show homework page working as expected.
+- Homework page features working as expected.
+- Show books page working as expected.
+- Books page features working as expected.
+- Show wiki page working as expected.
+- Wiki page features working as expected.
+- Show register page working as expected.
+- Register page features working as expected. 
+- If user is not login notes and homework pages redirect to the login page.
+- After delete note redirect to the notes page.
+- After delete homework redirect to the homework page.
+- The navigation bar working as expected. 
+
+
+[Back to top](<#navigator>)
