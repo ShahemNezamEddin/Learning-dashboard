@@ -166,16 +166,28 @@
 | Text   | pass      | pass      | pass         | pass | pass     | pass              | pass            |
 | images | pass      | pass      | pass         | pass | pass     | pass              | pass            |
 | forms  | pass      | pass      | pass         | pass | pass     | pass              | pass            |
+
 [Back to top](<#navigator>)
 
 ## Lighthouse
-Shahem inventory site was also tested using [Google Lighthouse](https://developers.google.com/web/tools/lighthouse) in Chrome Developer Tools to test the page for:
+Learning-dashboard site was also tested using [Google Lighthouse](https://developers.google.com/web/tools/lighthouse) in Chrome Developer Tools to test the page for:
 - Performance - How the page performs whilst loading.
 - Accessibility - Is the site accessible for all users and how can it be improved.
 - Best Practices - Site conforms to industry best practices.
 - SEO - Search engine optimization. Is the site optimized for search engine result rankings.
 
-![Lighthouse test results Dice Game page]()
+<details><summary><b>Lighthouse test</b></summary>
+
+![Lighthouse test results Learning-dashboard home page]()
+![Lighthouse test results Learning-dashboard notes page]()
+![Lighthouse test results Learning-dashboard homework page]()
+![Lighthouse test results Learning-dashboard books page]()
+![Lighthouse test results Learning-dashboard wiki page]()
+![Lighthouse test results Learning-dashboard register page]()
+![Lighthouse test results Learning-dashboard login page]()
+![Lighthouse test results Learning-dashboard logout page]()
+
+</details><br/>
 
 [Back to top](<#navigator>)
 
