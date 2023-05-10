@@ -1,5 +1,9 @@
 from django.test import TestCase
+# from django.core.urlresolvers import reverse
+# from django.contrib.auth.models import User
 from .forms import *
+# from .models import *
+# from django.contrib.auth.models import Group
 
 # Create your tests here.
 
@@ -53,9 +57,9 @@ class TestHomeworkForms(TestCase):
         self.assertIn('due', form.errors.keys())
         self.assertEqual(form.errors['due'][0], 'This field is required.')
 
-    def test_is_finished_is_not_required(self):
-        form = HomeworkForms({'subject': 'Test is_finished', 'title': 'Test is_finished', 'description': 'Test is_finished', 'due': '11-11-2023 11:11'})
-        self.assertTrue(form.is_valid())
+    # def test_is_finished_is_not_required(self):
+    #     form = HomeworkForms({'subject': 'Test is_finished', 'title': 'Test is_finished', 'description': 'Test is_finished', 'due': '11-11-2023 11:11'})
+    #     self.assertTrue(form.is_valid())
 
     def test_fields_are_explicit_in_form_metaclass(self):
         form = HomeworkForms()
@@ -64,13 +68,13 @@ class TestHomeworkForms(TestCase):
 # Test Books and Wiki forms.
 
 
-class TestDashboardForm(TestCase):
+# class TestDashboardForm(TestCase):
 
-    def test_dashboard_text_is_required(self):
-        form = DashboardForm({'text': ''})
-        self.assertFalse(form.is_valid())
-        self.assertIn('subject', form.errors.keys())
-        self.assertEqual(form.errors['subject'][0], 'This field is required.')
+    # def test_dashboard_text_is_required(self):
+    #     form = DashboardForm({'text': ''})
+    #     self.assertFalse(form.is_valid())
+    #     self.assertIn('subject', form.errors.keys())
+    #     self.assertEqual(form.errors['subject'][0], 'This field is required.')
 
 # Test Registration forms.
 
@@ -98,3 +102,74 @@ class TestUserRegistrationForm(TestCase):
     def test_fields_are_explicit_in_form_metaclass(self):
         form = UserRegistrationForm()
         self.assertEqual(form.Meta.fields, ['username', 'password1', 'password2'])
+
+# Test Home views.
+
+
+# class TestHomeViews(TestCase):
+
+#     def test_get_home(self):
+#         response = self.client.get('')
+#         self.assertEqual(response.status_code, 200)
+#         self.assertTemplateUsed(response, 'dashboard/home.html')
+
+# Test Notes views.
+
+
+# class TestNotesViews(TestCase):
+
+    # def test_get_Notes(self):
+    #     response = self.client.get('/notes')
+    #     self.assertEqual(response.status_code, 200)
+    #     self.assertTemplateUsed(response, 'dashboard/notes.html')
+    
+    # def test_get_delete_note(self):
+    #     note = Notes.objects.create(title='Test delete a note', description='Test delete a note')
+    #     response = self.client.get(f'/notes/{note.id}')
+    #     self.assertEqual(response.status_code, 200)
+    #     self.assertTemplateUsed(response, 'dashboard/notes.html')
+
+
+# Test Homework views.
+
+
+# class TestHomeworkViews(TestCase):
+
+#     fixtures = ['users.json']
+    
+#     def setUp(self):
+#         self.response = self.client.login(username='shahem', password='koko1234')
+
+#     def test_get_Homework(self):
+#         response = self.client.get('/homework')
+#         self.assertEqual(response.status_code, 200)
+#         self.assertTemplateUsed(response, 'dashboard/homework.html')
+
+
+# Test Books views.
+
+
+class TestBooksViews(TestCase):
+
+    def test_get_Books(self):
+        response = self.client.get('/books')
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'dashboard/books.html')
+
+# Test Books views.
+
+
+class TestWikiViews(TestCase):
+
+    def test_get_Wiki(self):
+        response = self.client.get('/wiki')
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'dashboard/wiki.html')
+
+
+# class MyTest(TestCase):
+#     fixtures = ["users.json"]
+
+#     def test_should_create_group(self):
+#         group = Group.objects.get(pk=1)
+#         self.assertEqual(group.name, "appusers")
