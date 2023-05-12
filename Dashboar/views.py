@@ -5,7 +5,7 @@ from django.forms.widgets import FileInput
 import requests
 import wikipedia
 from django.contrib.auth.decorators import login_required
-
+from django.shortcuts import redirect
 
 # Create your views here.
 # home views.
@@ -24,6 +24,7 @@ def notes(request):
         if form.is_valid():
             notes = Notes(user=request.user, title=request.POST['title'], description=request.POST['description'])
             notes.save()
+        return redirect('/notes')
         messages.success(request, f"Note added from {request.user.username} successfully!")
     else:
         form = NotesForm()
