@@ -43,6 +43,21 @@ def delete_note_confirm(request, pk=None):
     note = Notes.objects.get(id=pk)
     return render(request, "dashboard/delete_note_confirm.html", {"note": note})
 
+@login_required
+def edit_note(request, pk=None):
+    note = Notes.objects.get(id=pk)
+    if request.method == 'POST':
+        form = NotesForm(request.POST, instance=note)
+        if form.is_valid():
+            form.save()
+            return redirect('notes')
+    form = NotesForm(instance=note)
+    context = {
+        'form': form,
+        "note": note
+    }
+    return render(request, "dashboard/edit_note.html", context)
+
 
 @login_required 
 def note_detail(request, pk=None):

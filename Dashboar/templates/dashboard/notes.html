@@ -11,7 +11,12 @@
                         <div class="card-header">{{note.title}}</div>
                         <div class="card-body">{{note.description|slice:"0:100"}}</div>
                         <div class="card-footer mt-auto "><a href="{% url 'delete-note-confirm' note.id %}">
-                            <i class="fa fa-trash fa-2x"></i></a>
+                            <i class="fa fa-trash fa-2x"></i></a>   
+                        </div>
+                        <div class="card-footer mt-auto">
+                            <a href="{% url 'edit-note' note.id %}">
+                                Edit
+                            </a>
                         </div>
                      </a>
                 </div>

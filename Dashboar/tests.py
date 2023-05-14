@@ -106,39 +106,34 @@ class TestUserRegistrationForm(TestCase):
 # Test Home views.
 
 
-# class TestHomeViews(TestCase):
+class TestHomeViews(TestCase):
 
-#     def test_get_home(self):
-#         response = self.client.get('')
-#         self.assertEqual(response.status_code, 200)
-#         self.assertTemplateUsed(response, 'dashboard/home.html')
+    def test_get_home(self):
+        response = self.client.get('')
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'dashboard/home.html')
 
 # Test Notes views.
 
 
-# class TestNotesViews(TestCase):
+class TestNotesViews(TestCase):
 
-    # def test_get_Notes(self):
-    #     response = self.client.get('/notes')
-    #     self.assertEqual(response.status_code, 200)
-    #     self.assertTemplateUsed(response, 'dashboard/notes.html')
+    def test_get_Notes(self):
+        response = self.client.get('/notes')
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'dashboard/notes.html')
     
-    # def test_get_delete_note(self):
-    #     note = Notes.objects.create(title='Test delete a note', description='Test delete a note')
-    #     response = self.client.get(f'/notes/{note.id}')
-    #     self.assertEqual(response.status_code, 200)
-    #     self.assertTemplateUsed(response, 'dashboard/notes.html')
+    def test_get_delete_note(self):
+        note = Notes.objects.create(title='Test delete a note', description='Test delete a note')
+        response = self.client.get(f'/notes/{note.id}')
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'dashboard/notes.html')
 
 
 # Test Homework views.
 
 
 # class TestHomeworkViews(TestCase):
-
-#     fixtures = ['users.json']
-    
-#     def setUp(self):
-#         self.response = self.client.login(username='shahem', password='koko1234')
 
 #     def test_get_Homework(self):
 #         response = self.client.get('/homework')
@@ -156,7 +151,7 @@ class TestBooksViews(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'dashboard/books.html')
 
-# Test Books views.
+# Test Wiki views.
 
 
 class TestWikiViews(TestCase):
@@ -165,11 +160,3 @@ class TestWikiViews(TestCase):
         response = self.client.get('/wiki')
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'dashboard/wiki.html')
-
-
-# class MyTest(TestCase):
-#     fixtures = ["users.json"]
-
-#     def test_should_create_group(self):
-#         group = Group.objects.get(pk=1)
-#         self.assertEqual(group.name, "appusers")
