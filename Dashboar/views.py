@@ -1,11 +1,11 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from . forms import *
 from django.contrib import messages
 from django.forms.widgets import FileInput
 import requests
 import wikipedia
 from django.contrib.auth.decorators import login_required
-from django.shortcuts import redirect
+from django.views import generic, View
 
 # Create your views here.
 # home views.
@@ -37,6 +37,12 @@ def delete_note(request, pk=None):
     Notes.objects.get(id=pk).delete()
     messages.success(request, f"Note removed by {request.user.username} successfully!")
     return redirect("notes")
+
+
+@login_required 
+def note_detail(request, pk=None):
+        note = Notes.objects.get(id=pk)
+        return render(request, "dashboard/note_detail.html", {"note": note})
 
 
 # homework views.
