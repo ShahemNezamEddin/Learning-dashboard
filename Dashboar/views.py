@@ -15,7 +15,7 @@ def home(request):
     return render(request, 'dashboard/home.html')
 
 
-# home views.
+# notes views.
 
 @login_required
 def notes(request):
@@ -32,16 +32,19 @@ def notes(request):
     context = {'notes': notes, 'form': form}
     return render(request, 'dashboard/notes.html', context)
 
+
 @login_required
 def delete_note(request, pk=None):
     Notes.objects.get(id=pk).delete()
     messages.success(request, f"Note removed by {request.user.username} successfully!")
     return redirect("notes")
 
+
 @login_required
 def delete_note_confirm(request, pk=None):
     note = Notes.objects.get(id=pk)
     return render(request, "dashboard/delete_note_confirm.html", {"note": note})
+
 
 @login_required
 def edit_note(request, pk=None):
@@ -54,7 +57,6 @@ def edit_note(request, pk=None):
     form = NotesForm(instance=note)
     context = {
         'form': form,
-        "note": note
     }
     return render(request, "dashboard/edit_note.html", context)
 
@@ -106,6 +108,7 @@ def homework(request):
     }
     return render(request, 'dashboard/homework.html', context)
 
+
 @login_required
 def update_homework(request, pk=None):
     homework = Homework.objects.get(id=pk)
@@ -116,6 +119,7 @@ def update_homework(request, pk=None):
 
     homework.save()
     return redirect('homework')
+
 
 @login_required
 def delete_homework(request, pk=None):
