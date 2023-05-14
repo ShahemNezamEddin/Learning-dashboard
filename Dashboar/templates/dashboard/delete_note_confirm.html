@@ -1,0 +1,21 @@
+{% extends 'dashboard/base.html' %} 
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="container">
+    <div class="col-md-12">
+
+        <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">{{note.title}}</h5>
+              <p class="card-text">Are you sure you wont to delete this note.</p>
+              <a href="{% url 'delete-note' note.id %}" class="card-link">Yes</a>
+              <a href="{% url 'notes' %}" class="card-link">No</a>
+            </div>
+          </div>
+    </div>
+</div>
+<br><br>
+
+{% endblock content %}
+

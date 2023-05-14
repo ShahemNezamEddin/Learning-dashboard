@@ -38,11 +38,16 @@ def delete_note(request, pk=None):
     messages.success(request, f"Note removed by {request.user.username} successfully!")
     return redirect("notes")
 
+@login_required
+def delete_note_confirm(request, pk=None):
+    note = Notes.objects.get(id=pk)
+    return render(request, "dashboard/delete_note_confirm.html", {"note": note})
+
 
 @login_required 
 def note_detail(request, pk=None):
-        note = Notes.objects.get(id=pk)
-        return render(request, "dashboard/note_detail.html", {"note": note})
+    note = Notes.objects.get(id=pk)
+    return render(request, "dashboard/note_detail.html", {"note": note})
 
 
 # homework views.
