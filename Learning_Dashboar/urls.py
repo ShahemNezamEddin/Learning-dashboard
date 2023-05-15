@@ -18,6 +18,8 @@ from django.urls import path
 from django.urls.conf import include
 from Dashboar import views as dash_views
 from django.contrib.auth import views as auth_views
+from django.conf.urls import handler404, handler500, handler403, handler400
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -27,3 +29,8 @@ urlpatterns = [
     path('login/', auth_views.LoginView.as_view(template_name='dashboard/login.html'), name='login'),
     path('logout/', auth_views.LogoutView.as_view(template_name='dashboard/logout.html'), name='logout'),
 ]
+
+handler404 = 'Dashboar.views.error_404'
+handler403 = 'Dashboar.views.error_403'
+handler400 = 'Dashboar.views.error_400'
+handler500 = 'Dashboar.views.error_500'
