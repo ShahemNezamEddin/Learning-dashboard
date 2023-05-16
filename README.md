@@ -21,6 +21,9 @@
         - [Home](<#home>)
         - [Notes](<#notes>)
         - [Delete_note](<#delete_note>)
+        - [Delete_note_confirm](<#delete_note_confirm>)
+        - [Edit_note](<#edit_note>)
+        - [Note_detail](<#note_detail>)
         - [Homework](<#homework>)
         - [Update_homework](<#update_homework>)
         - [Delete_homework](<#delete_homework>)
@@ -28,6 +31,9 @@
         - [Wiki](<#wiki>)
         - [Register](<#register>)
     - [Future features](<#future-features>)
+        - [Delete_note_confirm](<#delete_homework_confirm>)
+        - [Edit_homework](<#edit_homework>)
+        - [Homework_detail](<#homework_detail>)
 - [**Technologies used**](<#technologies-used>)
 - [**Python Packages**](<#python-packages>)        
 - [**Testing**](<#testing>)
@@ -84,6 +90,23 @@
 
 [Back to top](<#navigator>)
 
+### Delete_note_confirm
+- Redirect to the delete_note_confirm page, and the user abel to delete note or redirect to the notes page.
+
+[Back to top](<#navigator>)
+
+### Edit_note
+- Redirect to the edit_note page, and the user abel to edit the note then redirect to the notes page.
+- The user can in the edit_note page redirect to the notes page.
+
+[Back to top](<#navigator>)
+
+### Note_detail
+- Redirect to the note_detail page, and the user is able to edit and delete the note.
+- The user sees the full note.
+
+[Back to top](<#navigator>)
+
 ### Homework
 - Render the homework page, and the user abel to add homework.
 - The user gets a success message after he adds the homework.
@@ -119,6 +142,20 @@
 [Back to top](<#navigator>)
 
 ## Future features
+
+### Delete_note_confirm
+
+[Back to top](<#navigator>)
+
+### Edit_homework
+- Redirect to the edit_homework page, and the user is able to edit the note and then redirect to the homework page.
+- The user can in the edit_homework page redirect to the homework page.
+
+[Back to top](<#navigator>)
+
+### Homework_detail
+- Redirect to the homework_detail page, and the user abel to edit and delete the homework.
+- The user sees the full homework.
 
 [Back to top](<#navigator>)
 

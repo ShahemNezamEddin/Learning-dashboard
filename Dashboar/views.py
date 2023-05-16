@@ -53,6 +53,7 @@ def edit_note(request, pk=None):
         form = NotesForm(request.POST, instance=note)
         if form.is_valid():
             form.save()
+            messages.success(request, f"Note edited by {request.user.username} successfully!")
             return redirect('notes')
     form = NotesForm(instance=note)
     context = {

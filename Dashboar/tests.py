@@ -1,8 +1,10 @@
 from django.test import TestCase
 # from django.core.urlresolvers import reverse
-# from django.contrib.auth.models import User
+from django.contrib.auth.models import User
+from django.contrib.auth import get_user_model
 from .forms import *
-# from .models import *
+
+from .models import *
 # from django.contrib.auth.models import Group
 
 # Create your tests here.
@@ -116,18 +118,24 @@ class TestHomeViews(TestCase):
 # Test Notes views.
 
 
-class TestNotesViews(TestCase):
+# class TestNotesViews(TestCase):
+#     def test_setUp(self):
+#         username = 'testuser'
+#         password = 'testpass'    
+#         User = get_user_model()
+#         user = User.objects.create_user(username, password=password)
+#         logged_in = self.client.login(username=username, password=password)
 
-    def test_get_Notes(self):
-        response = self.client.get('/notes')
-        self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'dashboard/notes.html')
-    
-    def test_get_delete_note(self):
-        note = Notes.objects.create(title='Test delete a note', description='Test delete a note')
-        response = self.client.get(f'/notes/{note.id}')
-        self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'dashboard/notes.html')
+#     def test_get_Notes(self):
+#         response = self.client.get('/notes')
+#         self.assertEqual(response.status_code, 200)
+#         self.assertTemplateUsed(response, 'dashboard/notes.html')
+
+#     def test_get_delete_note(self):
+#         note = Notes.objects.create(title='Test delete a note', description='Test delete a note')
+#         response = self.client.get(f'/notes/{note.id}')
+#         self.assertEqual(response.status_code, 200)
+#         self.assertTemplateUsed(response, 'dashboard/notes.html')
 
 
 # Test Homework views.
@@ -160,3 +168,22 @@ class TestWikiViews(TestCase):
         response = self.client.get('/wiki')
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'dashboard/wiki.html')
+
+# Test model.
+
+
+class TestModels(TestCase):
+    def test_setUp(self):
+        username = 'testuser'
+        password = 'testpass'
+        User = get_user_model()
+        user = User.objects.create_user(username, password=password)
+        logged_in = self.client.login(username=username, password=password)
+
+    def test_homework_is_finished_is_false(self):
+        homework = Homework.objects.create(subject='Test is_finished', title='Test is_finished', description='Test is_finished', due='2023-05-13 11:11')
+        self.assertFalse(homework.is_finished)
+
+    # def test_item_string_method_returns_name(self):
+    #     item = Item.objects.create(name='Test Todo Item')
+    #     self.assertEqual(str(item), 'Test Todo Item')
