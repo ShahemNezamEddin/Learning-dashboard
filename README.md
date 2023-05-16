@@ -9,11 +9,11 @@
 
 [Learning-dashboard](https://learning-dashboard.herokuapp.com/) site.
 
-<details><summary><b>Responsive Mockup</b></summary>
+<details><summary><b>Responsive</b></summary>
 
-![Responsive Mockup Desktop]()
-![Responsive Mockup iPad]()
-![Responsive Mockup mobil]()
+![Responsive Desktop](./static/images_readme/image3.PNG)
+![Responsive iPad](./static/images_readme/image2.PNG)
+![Responsive mobil](./static/images_readme/image1.PNG)
 
 </details><br/>
 
@@ -37,9 +37,10 @@
         - [Wiki](<#wiki>)
         - [Register](<#register>)
     - [Future features](<#future-features>)
-        - [Delete_note_confirm](<#delete_homework_confirm>)
+        - [Delete_homework_confirm](<#delete_homework_confirm>)
         - [Edit_homework](<#edit_homework>)
         - [Homework_detail](<#homework_detail>)
+        - [Add More Content](<#add-more-content>)
 - [**Technologies used**](<#technologies-used>)
     - [Languages](<#languages>)
     - [Frameworks-Software](<#frameworks-software>)
@@ -84,7 +85,7 @@
 ## Site structure
 
 - Learning-dashboard is an application that is presented on many pages website.
-- - When the application starts the user sees a short welcome message, and four choices.
+- When the application starts the user sees a short welcome message, and four choices.
 - Two of them are accessed without login
 - Two of them are accessed with login.
  
@@ -97,11 +98,16 @@
 ### Home
 - Render the home page.
 
+![Home](./static/images_readme/home1.PNG)
+
 [Back to top](<#navigator>)
 
 ### Notes
 - Render the notes page, and the user abel to add note.
 - The user gets a success message after he adds the note.
+
+![Notes](./static/images_readme/notes2.PNG)
+![Notes](./static/images_readme/notes3.PNG)
 
 [Back to top](<#navigator>)
 
@@ -109,10 +115,14 @@
 - Redirect to the notes page, and the user abel to delete note.
 - The user gets a success message after he deletes the note.
 
+![Notes](./static/images_readme/notes8.PNG)
+
 [Back to top](<#navigator>)
 
 ### Delete_note_confirm
 - Redirect to the delete_note_confirm page, and the user abel to delete note or redirect to the notes page.
+
+![Notes](./static/images_readme/notes7.PNG)
 
 [Back to top](<#navigator>)
 
@@ -120,11 +130,16 @@
 - Redirect to the edit_note page, and the user abel to edit the note then redirect to the notes page.
 - The user can in the edit_note page redirect to the notes page.
 
+![Notes](./static/images_readme/notes5.PNG)
+![Notes](./static/images_readme/notes6.PNG)
+
 [Back to top](<#navigator>)
 
 ### Note_detail
 - Redirect to the note_detail page, and the user is able to edit and delete the note.
 - The user sees the full note.
+
+![Notes](./static/images_readme/notes4.PNG)
 
 [Back to top](<#navigator>)
 
@@ -132,10 +147,15 @@
 - Render the homework page, and the user abel to add homework.
 - The user gets a success message after he adds the homework.
 
+![Homework](./static/images_readme/homework1.PNG)
+![Homework](./static/images_readme/homework2.PNG)
+
 [Back to top](<#navigator>)
 
 ### Update_homework
 - Render the homework page, and the user abel to update is_finished in homework.
+
+![Homework](./static/images_readme/homework4.PNG)
 
 [Back to top](<#navigator>)
 
@@ -143,15 +163,24 @@
 - Redirect to the notes page, and the user abel to delete homework.
 - The user gets a success message after he deletes the homework.
 
+![Homework](./static/images_readme/homework3.PNG)
+
 [Back to top](<#navigator>)
 
 ### Books
 - Render the books page, get the input text from the user then search it, and get the top ten results.
 
+![Books](./static/images_readme/books1.PNG)
+![Books](./static/images_readme/books2.PNG)
+![Books](./static/images_readme/books3.PNG)
+
 [Back to top](<#navigator>)
 
 ### Wiki
 - Render the wiki page, get the input text from the user then search it.
+
+![Wiki](./static/images_readme/wiki1.PNG)
+![Wiki](./static/images_readme/wiki2.PNG)
 
 [Back to top](<#navigator>)
 
@@ -164,7 +193,8 @@
 
 ## Future features
 
-### Delete_note_confirm
+### Delete_homework_confirm
+- Redirect to the delete_homework_confirm page, and the user abel to delete homework or redirect to the notes page.
 
 [Back to top](<#navigator>)
 
@@ -177,6 +207,10 @@
 ### Homework_detail
 - Redirect to the homework_detail page, and the user abel to edit and delete the homework.
 - The user sees the full homework.
+
+### Add More Content
+- Add More Content to book page.
+- Add More Content to wiki page.
 
 [Back to top](<#navigator>)
 

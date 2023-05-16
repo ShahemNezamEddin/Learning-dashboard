@@ -24,8 +24,8 @@ def notes(request):
         if form.is_valid():
             notes = Notes(user=request.user, title=request.POST['title'], description=request.POST['description'])
             notes.save()
-        return redirect('/notes')
-        messages.success(request, f"Note added from {request.user.username} successfully!")
+            messages.success(request, f"Note added from {request.user.username} successfully!")
+            return redirect('/notes')
     else:
         form = NotesForm()
     notes = Notes.objects.filter(user=request.user)
@@ -94,6 +94,7 @@ def homework(request):
             )
             Homeworks.save()
             messages.success(request, f"Homework added from {request.user.username} successfully!")
+            return redirect('/homework')
     else:
         form = HomeworkForms()
     homework = Homework.objects.filter(user=request.user)
