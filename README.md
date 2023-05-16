@@ -7,9 +7,13 @@
 - It will show that the notes and the homeworks after the user is login.
 - Learning-dashboard is a application will have a postgres database.
 
-[Learning-dashboard]() site.
+[Learning-dashboard](https://learning-dashboard.herokuapp.com/) site.
 
-![Responsive Mockup]()
+<details><summary><b>Responsive Mockup</b></summary>
+
+![Responsive Mockup Desktop]()
+![Responsive Mockup iPad]()
+![Responsive Mockup mobil]()
 
 # Navigator
 
@@ -35,7 +39,10 @@
         - [Edit_homework](<#edit_homework>)
         - [Homework_detail](<#homework_detail>)
 - [**Technologies used**](<#technologies-used>)
-- [**Python Packages**](<#python-packages>)        
+    - [Languages](<#languages>)
+    - [Frameworks-Software](<#frameworks-software>)
+    - [Libraries](<#libraries>)
+    - [Python Packages](<#python-packages>)      
 - [**Testing**](<#testing>)
     - [Code Validation](<#code-validation>)
     - [Browser Compatibility](<#browser-compatibility>)
@@ -43,7 +50,19 @@
     - [Lighthouse](<#lighthouse>)
     - [Manual testing](<#manual-testing>)
     - [User stories testing](<#user-stories-testing>)
-    - [Fixed bugs](<#Fixed-bugs>)
+    - [Fixed bugs](<#fixed-bugs>)
+    - [Unfixed Bugs](<#unfixed-bugs>)
+- [**Deployment**](<#deployment>)
+    - [To deploy the project](<#to-deploy-the-project>)
+    - [To fork the repository on GitHub](<#to-fork-the-repository-on-github>)
+    - [To create a local clone of this project](<#to-create-a-local-clone-of-this-project>)
+- [**Credits**](<#credits>)
+    - [Content](<#content>)
+    - [Media](<#media>)     
+- [**Acknowledgements**](<#acknowledgements>)      
+
+
+
 # User experience (UX)
 
 ## User stories
@@ -56,7 +75,7 @@
 - As a user, I want to be able to search on wikipedia, and open in a now tap.
 - As a user, I want to be able to register, login and logout.
 - As a user, I want to be able to navigate easily on the site.
-- As a user I want have an easy way of getting back to the home page.
+- As a user, I want have an easy way of getting back to the home page.
 
 [Back to top](<#navigator>)
 
@@ -160,16 +179,53 @@
 [Back to top](<#navigator>)
 
 # Technologies used
-- [Django](https://www.djangoproject.com/) - Provides Python web framework for the application.
-- [Python](https://en.wikipedia.org/wiki/Python_(programming_language)) - Provides the functionality for the application.
-- [ElephantSQL](https://customer.elephantsql.com/) - Used to host the application data.
-- [Gitpod](https://www.gitpod.io/#get-started) - used to deploy the website.
-- [Github](https://github.com/) - used to host and edit the website.
-- [Heroku](https://en.wikipedia.org/wiki/Heroku) - A cloud platform that the application is deployed to.
 
 [Back to top](<#navigator>)
 
-# Python Packages
+## Languages
+
+* [Python](https://en.wikipedia.org/wiki/Python_(programming_language)) - Provides the functionality for the site.
+* [HTML5](https://en.wikipedia.org/wiki/HTML) - Provides the content and structure for the website.
+* [CSS3](https://en.wikipedia.org/wiki/CSS) - Provides the styling for the website.
+* [JavaScript](https://en.wikipedia.org/wiki/JavaScript) - Provides interactive elements of the website
+
+[Back to top](<#navigator>)
+
+## Frameworks-Software
+* [Bootstrap](https://getbootstrap.com/) - A CSS framework that helps building solid, responsive, mobile-first sites
+* [Django](https://www.djangoproject.com/) - A model-view-template framework used to create the Review | Alliance site
+* [Balsamiq](https://balsamiq.com/) - Used to create the wireframe.
+* [Github](https://github.com/) - Used to host and edit the website.
+* [Gitpod](https://www.gitpod.io) Used to create and edit the site, and used to push changes to the GitHub repository.
+* [Heroku](https://en.wikipedia.org/wiki/Heroku) - A cloud platform that the application is deployed to.
+* [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) - Used to test performance of site.
+* [Responsive Design Checker](https://www.responsivedesignchecker.com/) - Used for responsiveness check.
+* [Google Chrome DevTools](https://developer.chrome.com/docs/devtools/) - Used to debug and test responsiveness.
+* [Cloudinary](https://cloudinary.com/) - A service that hosts all static files in the project.
+* [HTML Validation](https://validator.w3.org/) - Used to validate HTML code
+* [CSS Validation](https://jigsaw.w3.org/css-validator/) - Used to validate CSS code
+* [PEP8 Validation](http://pep8online.com/) - At the time for deploying this project the PEP8 Online Validaton service was offline, therefore not used.
+
+[Back to top](<#navigator>)
+
+## Libraries
+
+The libraries used in this project are located in the requirements.txt file and have been documented below
+
+* [asgiref](https://pypi.org/project/asgiref/) - ASGI is a standard for Python asynchronous web apps and servers to communicate with each other, and positioned as an asynchronous successor to WSGI.
+* [cloudinary](https://pypi.org/project/cloudinary/) - The Cloudinary Python SDK allows you to quickly and easily integrate your application with Cloudinary. Effortlessly optimize, transform, upload and manage your cloud's assets.
+* [dj3-cloudinary-storage](https://pypi.org/project/dj3-cloudinary-storage/) - Django Cloudinary Storage is a Django package that facilitates integration with Cloudinary by implementing Django Storage API.
+* [Django](https://pypi.org/project/Django/) - Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design.
+* [django-crispy-forms](https://pypi.org/project/django-crispy-forms/) - Used to integrate Django DRY forms in the project.
+* [gunicorn](https://pypi.org/project/gunicorn/) - Gunicorn ‘Green Unicorn’ is a Python WSGI HTTP Server for UNIX. It’s a pre-fork worker model ported from Ruby’s Unicorn project. The Gunicorn server is broadly compatible with various web frameworks, simply implemented, light on server resource usage, and fairly speedy.
+* [django-summernote](https://summernote.org/) 
+* [psycopg2](https://pypi.org/project/psycopg2/) - Psycopg is the most popular PostgreSQL database adapter for the Python programming language.
+* [pytz](https://pypi.org/project/pytz/) - This is a set of Python packages to support use of the OpenID decentralized identity system in your application, update to Python 3
+* [sqlparse](https://pypi.org/project/sqlparse/) - sqlparse is a non-validating SQL parser for Python. It provides support for parsing, splitting and formatting SQL statements.
+
+[Back to top](<#navigator>)
+
+## Python Packages
 - [Sys](https://docs.python.org/3/library/sys.html) - A module that provides access to used or maintained by the interpreter and to functions that interact strongly with the interpreter. It is always available (*text taken from [here](https://docs.python.org/3/library/sys.html)*)
 - [OS](https://docs.python.org/3/library/os.html) - A module that provides a portable way of using OS dependent functionality.
 
@@ -238,13 +294,94 @@ Learning-dashboard site was also tested using [Google Lighthouse](https://develo
 - Show books page working as expected.
 - Books page features working as expected.
 - Show wiki page working as expected.
-- Wiki page features working as expected.
+- Wiki page features not working as expected.
 - Show register page working as expected.
 - Register page features working as expected. 
 - If user is not login notes and homework pages redirect to the login page.
 - After delete note redirect to the notes page.
+- After edit note redirect to the notes page.
 - After delete homework redirect to the homework page.
 - The navigation bar working as expected. 
 
+
+[Back to top](<#navigator>)
+
+## Fixed bugs
+
+- I faced during development, many of the yellow pages but it was mostly the wrong names or baths.
+- The test did not work because of the database. so I add sys.
+- I had to go back to the documents and lessons of Django during development to use it correctly.
+- Fixing code linting errors.
+
+[Back to top](<#navigator>)
+
+### Unfixed Bugs
+
+- Test the views required login it doesn't work.
+- The wiki search does not work as expected.
+
+[Back to top](<#navigator>)
+
+# Deployment
+
+## To deploy the project
+The project was deployed to [Heroku](https://www.heroku.com). To deploy,I follow the process below:
+  1. The first step is to log in to Heroku (or create an account if needed).
+  2. In the top right corner there is a button that is labeled 'New'. Click that and then select 'Create new app'.
+  3. Enter an application name that needs to be unique. When you have chose the name, choose your region and click 'Create app".
+  4. On the next page, click the 'Settings' tab and find the "Config Vars" section. When you have found it, click "Reveal Config Vars". add values.(KEY input field = "CREDS", VALUE input field = "your credentials")
+  5. Next step is to add buildpacks to the application which will run when the application is deployed. The reason why this is needed is because all dependencies and configurations will be installed for the application. To do this you scroll down to the buildpacks section on the settings page and click the button 'Add buildpack'.
+  6. Add "Python" and node.js". It is important that Python is listed above node.js.
+  7. Scroll to the top of the settings page and click the 'Deploy' tab. For deployment method, select 'Github'. Search for the repository name you want to deploy and then click connect.
+  8. Scroll down on the deploy page and choose deployment type. Choose to enable automatic deployments if you want to and then click 'Deploy Branch'.
+
+  [learning-dashboard](https://learning-dashboard.herokuapp.com/) site.
+
+[Back to top](<#navigator>)
+
+## To fork the repository on GitHub
+A copy of the GitHub Repository can be made by forking the GitHub account. This copy can be viewed and changes can be made to the copy without affecting the original repository. Take the following steps to fork the repository;
+1. Log in to **GitHub** and locate the [repository](https://github.com/ShahemNezamEddin/Learning-dashboard).
+2. On the right-hand side of the page inline with the repository name, is a button called **'Fork'**. Click on the button to create a copy of the original repository in your GitHub Account.
+
+[Back to top](<#navigator>)
+
+## To create a local clone of this project
+The method for cloning a project from GitHub is below:
+
+1. Under the repository’s name, click on the **code** tab.
+2. In the **Clone with HTTPS** section, click on the clipboard icon to copy the given URL.
+3. In your IDE of choice, open **Git Bash**.
+4. Change the current working directory to where you want the cloned directory to be made.
+5. Type **git clone**, then paste the URL copied from GitHub.
+6. Press **enter**, and the local clone will be created.
+
+[Back to top](<#navigator>)
+ 
+# Credits 
+
+### Content 
+
+- The idea came from Code Institute course materials and youtube videos.
+- The inspiration for this project came from Hello Django and DjangoBlog projects.
+- The font came from [Google Fonts](https://fonts.google.com/).
+- The color palate was compiled by:
+  - [Adobe color](https://color.adobe.com/).
+  - [My color space](https://mycolor.space/).
+  - [Contrast grid](https://contrast-grid.eightshapes.com/).
+
+[Back to top](<#navigator>)
+
+### Media
+
+- The photos used on the home page are from [Pexels](https://www.pexels.com/)
+
+[Back to top](<#navigator>)
+
+# Acknowledgements
+I want to thank:
+- My mentor [Precious Ijege](https://www.linkedin.com/in/precious-ijege-908a00168/) for guidance and support.
+- Slack community and Code Institute crew for their help and support.
+- My family and friends, for their user experience and feedback.
 
 [Back to top](<#navigator>)
