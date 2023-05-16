@@ -15,6 +15,8 @@
 ![Responsive Mockup iPad]()
 ![Responsive Mockup mobil]()
 
+</details><br/>
+
 # Navigator
 
 - [**User experience UX**](<#user-experience-ux>)
@@ -81,8 +83,8 @@
 
 ## Site structure
 
-- Learning-dashboard is application that is being presented in 8 pages website.
-- When the application starts the user see a short welcome message, and four choices.
+- Learning-dashboard is an application that is presented on many pages website.
+- - When the application starts the user sees a short welcome message, and four choices.
 - Two of them are accessed without login
 - Two of them are accessed with login.
  
