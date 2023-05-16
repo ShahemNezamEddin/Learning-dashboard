@@ -12,7 +12,7 @@
 <details><summary><b>Responsive</b></summary>
 
 ![Responsive Desktop](./static/images_readme/image3.PNG)
-![Responsive iPad](./static/images_readme/image2.PNG)
+![Responsive iPad](./static/images_readme/image4.PNG)
 ![Responsive mobil](./static/images_readme/image1.PNG)
 
 </details><br/>
@@ -189,6 +189,9 @@
 - The user gets a success message after he register.
 - Redirect to the login page.
 
+![Register](./static/images_readme/register.PNG)
+![login](./static/images_readme/login.PNG)
+
 [Back to top](<#navigator>)
 
 ## Future features
@@ -230,7 +233,7 @@
 ## Frameworks-Software
 * [Bootstrap](https://getbootstrap.com/) - A CSS framework that helps building solid, responsive, mobile-first sites
 * [Django](https://www.djangoproject.com/) - A model-view-template framework used to create the Review | Alliance site
-* [Balsamiq](https://balsamiq.com/) - Used to create the wireframe.
+* [justinmind](https://www.justinmind.com/) - Used to create the wireframe.
 * [Github](https://github.com/) - Used to host and edit the website.
 * [Gitpod](https://www.gitpod.io) Used to create and edit the site, and used to push changes to the GitHub repository.
 * [Heroku](https://en.wikipedia.org/wiki/Heroku) - A cloud platform that the application is deployed to.
@@ -238,7 +241,6 @@
 * [Responsive Design Checker](https://www.responsivedesignchecker.com/) - Used for responsiveness check.
 * [Google Chrome DevTools](https://developer.chrome.com/docs/devtools/) - Used to debug and test responsiveness.
 * [Cloudinary](https://cloudinary.com/) - A service that hosts all static files in the project.
-* [HTML Validation](https://validator.w3.org/) - Used to validate HTML code
 * [CSS Validation](https://jigsaw.w3.org/css-validator/) - Used to validate CSS code
 * [PEP8 Validation](http://pep8online.com/) - At the time for deploying this project the PEP8 Online Validaton service was offline, therefore not used.
 
@@ -274,8 +276,13 @@ The libraries used in this project are located in the requirements.txt file and 
 ### Python
 
 * No errors were returned when passing through the official [CI Python Linter](https://pep8ci.herokuapp.com/)
+* admin.py - No errors or warnings reported
+* forms.py - No errors or warnings reported
+* models.py - No errors or warnings reported
+* test.py - There were some E501(line too long) errors reported
+* urls.py - There were some E501(line too long) errors reported
+* views.py - There were some E501(line too long) errors reported
 
-![CI Python Linter]()
 
 [Back to top](<#navigator>)
 
@@ -365,7 +372,7 @@ The project was deployed to [Heroku](https://www.heroku.com). To deploy,I follow
   1. The first step is to log in to Heroku (or create an account if needed).
   2. In the top right corner there is a button that is labeled 'New'. Click that and then select 'Create new app'.
   3. Enter an application name that needs to be unique. When you have chose the name, choose your region and click 'Create app".
-  4. On the next page, click the 'Settings' tab and find the "Config Vars" section. When you have found it, click "Reveal Config Vars". add values.(KEY input field = "CREDS", VALUE input field = "your credentials")
+  4. On the next page, click the 'Settings' tab and find the "Config Vars" section. When you have found it, click "Reveal Config Vars". add values.
   5. Next step is to add buildpacks to the application which will run when the application is deployed. The reason why this is needed is because all dependencies and configurations will be installed for the application. To do this you scroll down to the buildpacks section on the settings page and click the button 'Add buildpack'.
   6. Add "Python" and node.js". It is important that Python is listed above node.js.
   7. Scroll to the top of the settings page and click the 'Deploy' tab. For deployment method, select 'Github'. Search for the repository name you want to deploy and then click connect.
@@ -405,6 +412,10 @@ The method for cloning a project from GitHub is below:
   - [Adobe color](https://color.adobe.com/).
   - [My color space](https://mycolor.space/).
   - [Contrast grid](https://contrast-grid.eightshapes.com/).
+- [justinmind](https://www.justinmind.com/) - Used to create the wireframe.
+
+![login](./static/images_readme/untiled.PNG)
+
 
 [Back to top](<#navigator>)
 

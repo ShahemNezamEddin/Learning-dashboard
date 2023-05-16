@@ -22,9 +22,11 @@ def notes(request):
     if request.method == "POST":
         form = NotesForm(request.POST)
         if form.is_valid():
-            notes = Notes(user=request.user, title=request.POST['title'], description=request.POST['description'])
+            notes = Notes(user=request.user, title=request.POST['title'],
+                          description=request.POST['description'])
             notes.save()
-            messages.success(request, f"Note added from {request.user.username} successfully!")
+            messages.success(request,
+                             f"Note added from {request.user.username} successfully!")
             return redirect('/notes')
     else:
         form = NotesForm()
@@ -36,14 +38,16 @@ def notes(request):
 @login_required
 def delete_note(request, pk=None):
     Notes.objects.get(id=pk).delete()
-    messages.success(request, f"Note removed by {request.user.username} successfully!")
+    messages.success(request,
+                     f"Note removed by {request.user.username} successfully!")
     return redirect("notes")
 
 
 @login_required
 def delete_note_confirm(request, pk=None):
     note = Notes.objects.get(id=pk)
-    return render(request, "dashboard/delete_note_confirm.html", {"note": note})
+    return render(request,
+                  "dashboard/delete_note_confirm.html", {"note": note})
 
 
 @login_required
@@ -62,7 +66,7 @@ def edit_note(request, pk=None):
     return render(request, "dashboard/edit_note.html", context)
 
 
-@login_required 
+@login_required
 def note_detail(request, pk=None):
     note = Notes.objects.get(id=pk)
     return render(request, "dashboard/note_detail.html", {"note": note})
@@ -80,7 +84,7 @@ def homework(request):
                 if finished == 'on':
                     finished = True
                 else:
-                    finished = False              
+                    finished = False
             except:
                 finished = False
 
@@ -129,8 +133,8 @@ def delete_homework(request, pk=None):
     messages.success(request, f"Homework removed by {request.user.username} successfully!")
     return redirect("homework")
 
-
 # Books views.
+
 
 def books(request):
     if request.method == 'POST':
@@ -178,7 +182,7 @@ def wiki(request):
             'title': search.title,
             'url': search.url,
             'details': search.summary,
-        }  
+        }
         return render(request, 'dashboard/wiki.html', context)
     else:
         form = DashboardForm()

@@ -1,5 +1,4 @@
 from django.test import TestCase
-# from django.core.urlresolvers import reverse
 from django.contrib.auth.models import User
 from django.contrib.auth import get_user_model
 from .forms import *
@@ -59,24 +58,9 @@ class TestHomeworkForms(TestCase):
         self.assertIn('due', form.errors.keys())
         self.assertEqual(form.errors['due'][0], 'This field is required.')
 
-    # def test_is_finished_is_not_required(self):
-    #     form = HomeworkForms({'subject': 'Test is_finished', 'title': 'Test is_finished', 'description': 'Test is_finished', 'due': '11-11-2023 11:11'})
-    #     self.assertTrue(form.is_valid())
-
     def test_fields_are_explicit_in_form_metaclass(self):
         form = HomeworkForms()
         self.assertEqual(form.Meta.fields, ['subject', 'title', 'description', 'due', 'is_finished'])
-
-# Test Books and Wiki forms.
-
-
-# class TestDashboardForm(TestCase):
-
-    # def test_dashboard_text_is_required(self):
-    #     form = DashboardForm({'text': ''})
-    #     self.assertFalse(form.is_valid())
-    #     self.assertIn('subject', form.errors.keys())
-    #     self.assertEqual(form.errors['subject'][0], 'This field is required.')
 
 # Test Registration forms.
 
@@ -88,19 +72,19 @@ class TestUserRegistrationForm(TestCase):
         self.assertFalse(form.is_valid())
         self.assertIn('username', form.errors.keys())
         self.assertEqual(form.errors['username'][0], 'This field is required.')
-    
+
     def test_registration_password1_is_required(self):
         form = UserRegistrationForm({'password1': ''})
         self.assertFalse(form.is_valid())
         self.assertIn('password1', form.errors.keys())
         self.assertEqual(form.errors['password1'][0], 'This field is required.')
-            
+
     def test_registration_password2_is_required(self):
         form = UserRegistrationForm({'password2': ''})
         self.assertFalse(form.is_valid())
         self.assertIn('password2', form.errors.keys())
         self.assertEqual(form.errors['password2'][0], 'This field is required.')
-    
+
     def test_fields_are_explicit_in_form_metaclass(self):
         form = UserRegistrationForm()
         self.assertEqual(form.Meta.fields, ['username', 'password1', 'password2'])
@@ -118,35 +102,24 @@ class TestHomeViews(TestCase):
 # Test Notes views.
 
 
-# class TestNotesViews(TestCase):
-#     def test_setUp(self):
-#         username = 'testuser'
-#         password = 'testpass'    
-#         User = get_user_model()
-#         user = User.objects.create_user(username, password=password)
-#         logged_in = self.client.login(username=username, password=password)
+class TestNotesViews(TestCase):
+    def test_setUp(self):
+        username = 'testuser'
+        password = 'testpass'
+        User = get_user_model()
+        user = User.objects.create_user(username, password=password)
+        logged_in = self.client.login(username=username, password=password)
 
-#     def test_get_Notes(self):
-#         response = self.client.get('/notes')
-#         self.assertEqual(response.status_code, 200)
-#         self.assertTemplateUsed(response, 'dashboard/notes.html')
+    def test_get_Notes(self):
+        response = self.client.get('/notes')
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'dashboard/notes.html')
 
-#     def test_get_delete_note(self):
-#         note = Notes.objects.create(title='Test delete a note', description='Test delete a note')
-#         response = self.client.get(f'/notes/{note.id}')
-#         self.assertEqual(response.status_code, 200)
-#         self.assertTemplateUsed(response, 'dashboard/notes.html')
-
-
-# Test Homework views.
-
-
-# class TestHomeworkViews(TestCase):
-
-#     def test_get_Homework(self):
-#         response = self.client.get('/homework')
-#         self.assertEqual(response.status_code, 200)
-#         self.assertTemplateUsed(response, 'dashboard/homework.html')
+    def test_get_delete_note(self):
+        note = Notes.objects.create(title='Test delete a note', description='Test delete a note')
+        response = self.client.get(f'/notes/{note.id}')
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'dashboard/notes.html')
 
 
 # Test Books views.
@@ -183,7 +156,3 @@ class TestModels(TestCase):
     def test_homework_is_finished_is_false(self):
         homework = Homework.objects.create(subject='Test is_finished', title='Test is_finished', description='Test is_finished', due='2023-05-13 11:11')
         self.assertFalse(homework.is_finished)
-
-    # def test_item_string_method_returns_name(self):
-    #     item = Item.objects.create(name='Test Todo Item')
-    #     self.assertEqual(str(item), 'Test Todo Item')

@@ -15,5 +15,3 @@ class HomeworkAdmin(SummernoteModelAdmin):
     summernote_fields = ('description')
     list_filter = ('is_finished', 'due')
     search_fields = ['subject', 'title', 'description']
-
-
