@@ -2,8 +2,8 @@
 - Learning-dashboard is a site that hopes to demonstrate how pure HTML, CSS, JavaScript, Python and, Django  works in a real-world context. 
 - The site will be targeted users who want to CRUD notes, CRUD homework, and search a book, and wikipedia.
 - The site hopes to help users to make their learning easier.
-- The users can register to us the notes, and homework.
-- The users can us the books, and wikipedia with out register.
+- The users can register to use the notes, and homework.
+- The users can use the books, and wikipedia with out register.
 - It will show that the notes and the homeworks after the user is login.
 - Learning-dashboard is a application will have a postgres database.
 
