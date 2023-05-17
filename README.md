@@ -309,19 +309,18 @@ The libraries used in this project are located in the requirements.txt file and 
 Learning-dashboard site was also tested using [Google Lighthouse](https://developers.google.com/web/tools/lighthouse) in Chrome Developer Tools to test the page for:
 - Performance - How the page performs whilst loading.
 - Accessibility - Is the site accessible for all users and how can it be improved.
-- Best Practices - Site conforms to industry best practices.
 - SEO - Search engine optimization. Is the site optimized for search engine result rankings.
 
 <details><summary><b>Lighthouse test</b></summary>
 
-![Lighthouse test results Learning-dashboard home page]()
-![Lighthouse test results Learning-dashboard notes page]()
-![Lighthouse test results Learning-dashboard homework page]()
-![Lighthouse test results Learning-dashboard books page]()
-![Lighthouse test results Learning-dashboard wiki page]()
-![Lighthouse test results Learning-dashboard register page]()
-![Lighthouse test results Learning-dashboard login page]()
-![Lighthouse test results Learning-dashboard logout page]()
+![Lighthouse test results Learning-dashboard home page](./static/images_readme/Lighthouse1.PNG)
+![Lighthouse test results Learning-dashboard notes page](./static/images_readme/Lighthouse2.PNG)
+![Lighthouse test results Learning-dashboard homework page](./static/images_readme/Lighthouse3.PNG)
+![Lighthouse test results Learning-dashboard books page](./static/images_readme/Lighthouse4.PNG)
+![Lighthouse test results Learning-dashboard wiki page](./static/images_readme/Lighthouse5.PNG)
+![Lighthouse test results Learning-dashboard register page](./static/images_readme/Lighthouse6.PNG)
+![Lighthouse test results Learning-dashboard login page](./static/images_readme/Lighthouse7.PNG)
+![Lighthouse test results Learning-dashboard logout page](./static/images_readme/Lighthouse8.PNG)
 
 </details><br/>
 
