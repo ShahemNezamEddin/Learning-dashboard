@@ -350,7 +350,7 @@ Learning-dashboard site was also tested using [Google Lighthouse](https://develo
 
 ## Fixed bugs
 
-- I faced during development, many of the yellow pages but it was mostly the wrong names or baths.
+- I faced during development, many of the yellow pages but they were mostly wrong names or baths.
 - The test did not work because of the database. so I add sys.
 - I had to go back to the documents and lessons of Django during development to use it correctly.
 - Fixing code linting errors.
@@ -361,6 +361,7 @@ Learning-dashboard site was also tested using [Google Lighthouse](https://develo
 
 - Test the views required login it doesn't work.
 - The wiki search does not work as expected.
+- The site did not work on [ui.dev](https://ui.dev/amiresponsive)
 
 [Back to top](<#navigator>)
 
