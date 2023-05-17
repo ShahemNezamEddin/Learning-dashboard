@@ -313,7 +313,7 @@ Learning-dashboard site was also tested using [Google Lighthouse](https://develo
 
 <details><summary><b>Lighthouse test</b></summary>
 
-![Lighthouse test results Learning-dashboard home page](./static/images_readme/Lighthouse1.PNG)
+![Lighthouse test results Learning-dashboard home page](./static/images_readme/Lighthouse.PNG)
 ![Lighthouse test results Learning-dashboard notes page](./static/images_readme/Lighthouse2.PNG)
 ![Lighthouse test results Learning-dashboard homework page](./static/images_readme/Lighthouse3.PNG)
 ![Lighthouse test results Learning-dashboard books page](./static/images_readme/Lighthouse4.PNG)
